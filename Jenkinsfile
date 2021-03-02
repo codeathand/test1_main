@@ -19,9 +19,7 @@ pipeline {
                 echo "Testing"
                 dir ("jenkins_selenium") {
                     bat 'java -version'
-                    withMaven() {
-                        bat 'mvn clean install'
-                    }
+                    bat 'mvn clean install'
                 }
             }
         }
