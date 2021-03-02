@@ -16,7 +16,7 @@ pipeline {
                 echo "Testing"
                 dir ("jenkins_selenium") {
                     bat 'java -version'
-                    bat 'mvn clan install'
+                    bat 'mvn clean install'
                 }
             }
         }
