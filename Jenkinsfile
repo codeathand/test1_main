@@ -17,10 +17,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing"
-                dir ("jenkins_selenium") {
+
                     bat 'java -version'
                     bat 'mvn clean install'
-                }
+                
             }
         }
         stage('Deploy') {
