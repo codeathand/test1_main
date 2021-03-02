@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Selectors {
 	
 	/** Timeout for waiting element **/
-	int timeoutInSeconds = 1;
+	int timeoutInSeconds = 2;
 	
 	protected static WebDriver driver;
 	
@@ -137,6 +137,8 @@ public class Selectors {
 			for (int i=1; i<4; i++) {
 				driver.findElement(amountIncrease).click();
 				Thread.sleep(2000);
+//				WebDriverWait wait1 = new WebDriverWait(driver, timeoutInSeconds);
+//				wait1.until(ExpectedConditions.visibilityOfElementLocated(totalProducts));
 				WebElement totalnew = driver.findElement(totalProducts);
 				int pricenew = Integer.parseInt(totalnew.getText().substring(1).split("\\.", 2)[0]);
 //				System.out.println(price);
