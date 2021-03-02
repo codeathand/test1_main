@@ -15,10 +15,8 @@ pipeline {
             steps {
                 echo "Testing"
                 dir ("jenkins_selenium") {
-                    withPythonEnv('Python3') {
-                        bat 'java -version'
-                        bat 'mvn clan install'
-                    }
+                    bat 'java -version'
+                    bat 'mvn clan install'
                 }
             }
         }
